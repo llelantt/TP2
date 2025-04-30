@@ -1,0 +1,73 @@
+--TP2
+
+1. Le git status me montre que je n'ai pas encore de commits et que je n'ai pas encore effectué de manipulatins. 
+
+2. Pour vérifier que le nom de la branche master a bien été changée, je fais un git status. Je créer mon fichier en faisant : echo "# TP2 : Gestion des branches" > README.md
+Ensuite je créer mon commit en faisant git commit -m "AJout d'un fichier README.md", puis je vérifie en faisant git log
+
+3. Pour cela, je fais : echo "Ceci est une description du projet" >> README.md
+Puis je fais un git status pour être sûre que mon fichier a bien été modifié. 
+Ensuite, je fais git add README.md pour sauvegarder cette modification, un autre git status pour la vérification, et je réalise mon commit. 
+Pour cela, je fais git commit -m "Ajout d'une ligne dans le fichier via une sous-branche"
+Pour terminer, je consulte la lise de mes commits en faisant un git log : 
+ 1 file changed, 1 insertion(+)
+(base) llelant@a203-15:~/Documents/s2/gpo/TP2-LELANT-Louise$ git log
+commit 82d8e43cceed964f301c395bb670122288fea6d2 (HEAD -> feature1)
+Author: llelantt <llelant@a203-15.iut.univ-paris8.fr>
+Date:   Wed Apr 30 14:20:45 2025 +0200
+
+    Ajout d'une ligne dans le fichier via une sous-branche
+    
+4. Pour basculer sur develop, je fais git switch develop. Ensuite j'ajoute mon texte : echo "Modification sur develop avant merge de f1" >> README.md
+Je fais un git add README.md et un git status. 
+Je fais ensuite mon commit : git commit -m "Ajout d'une ligne dans le fichier de la branche principale" et pour finir git log et git status. 
+
+Après exécution de la commande pour fusionner, il y a un conflit. J'ouvre mon fichier README.md dans un éditeur de texte et je le modifie pour garder les lignes qui m'intéresse. Je refais ensuite la même procédure que précédement : git add README.md, git status, git commit -m "Modifications pour régler le conflit après fusion de develop et feature1", puis git log et git status.
+Je fais un git reflog : e41839b (develop) HEAD@{3}: commit (merge): Modifications pour régler le conflit après fusion de develop et feature1, ma fusion a bien marché.
+
+5. git switch -c feature2
+echo "# TP2 - LELANT Louise - Gestion des branches" > README.md
+git add README.md
+git status
+git commit -m "Creation d'une nouvelle branche et modifcation du fichier"
+git log 
+git status 
+
+6. git switch develop
+git switch -c feature3
+echo "# TP2 - Gestion des branches et fusions" > README.md
+git add README.md
+git status 
+git commit -m "Creation d'une nouvelle branche et modifcation du titre de README.md"
+git log
+git status
+
+7. git switch develop
+git merge feature2 : Mise à jour e41839b..9a877b0
+Fast-forward
+ README.md | 7 +------
+ 1 file changed, 1 insertion(+), 6 deletions(-)
+git add README.md
+git status
+9a877b0 (HEAD -> develop, feature2) HEAD@{0}: merge feature2: Fast-forward
+Il n'y a eu aucun conflit donc pas de commit.
+
+8. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
