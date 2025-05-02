@@ -89,7 +89,21 @@ Date:   Fri May 2 10:28:02 2025 +0200
     
     Travail en cours avant rebase
 
-5. 
+5. git switch develop
+vi README.md
+git add README.md
+git commit -m "Changement de titre sur develop"
+git log
+git push origin develop
+
+6. git rebase feature4
+git add README.md
+git commit -m "Fusion branche feature4 et develop"
+git rebase --continue
+
+7. La commande merge permet de fusionner deux branches entre elles, en indiquant la branche qui fusionne sur celle où on se situe. 
+
+8. La commande rebase permet de fusionner deyx branches tout en gardant les modifications de la branche qu'on vient fusionner à celle sur laquelle on se situe. 
 
 
 
