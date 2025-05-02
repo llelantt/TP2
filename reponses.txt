@@ -80,6 +80,17 @@ git commit -m "Ajout dans README.md - derniere ligne feature4"
 git log 
 
 4. git log --oneline, il y a onze commits. 
+git rebase -i HEAD~2
+git log : commit 48b214796acf191371dae2dbfbf7dfe0eb9987df (HEAD -> feature4)
+Author: llelantt <llelant@b110-14.iut.univ-paris8.fr>
+Date:   Fri May 2 10:28:02 2025 +0200
+
+    Ajout dans README.md - derniere ligne feature4
+    
+    Travail en cours avant rebase
+
+5. 
+
 
 
 
