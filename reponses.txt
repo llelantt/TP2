@@ -52,7 +52,35 @@ git status
 9a877b0 (HEAD -> develop, feature2) HEAD@{0}: merge feature2: Fast-forward
 Il n'y a eu aucun conflit donc pas de commit.
 
-8. 
+git merge feature3
+git add README.md
+git status 
+git commit -m "Reglage du conflit entre develop et feature3"
+git log
+git status 
+
+REBASE
+1. git switch -c feature4
+echo "Cette phrase concerne la partie rebase du TP2" >> README.md
+vi README.md
+git add README.md
+git commit -m "Ajout dans README.md - partie rebase"
+git log
+
+2. echo "Cette phrase concerne la partie rebase du TP2. (feature4)" >> README.md
+git add README.md
+git status
+git commit -m "Ajout dans README.md - mention feature4"
+git log 
+
+3. echo "Fin des modifications de la feature f4" >> README.md
+git add README.md
+git status
+git commit -m "Ajout dans README.md - derniere ligne feature4"
+git log 
+
+4. git log --oneline, il y a onze commits. 
+
 
 
 
